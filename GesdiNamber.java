@@ -49,12 +49,12 @@ public class GesdiNamber extends JFrame implements ActionListener{
 
         button2 = new JButton("Reveal number");
         button2.setFont(font);
-        button2.setBounds(100,575,400,50);
+        button2.setBounds(100,500,400,50);
         button2.addActionListener(this);
 
         button3 = new JButton("Reset number");
         button3.setFont(font);
-        button3.setBounds(100,650,400,50);
+        button3.setBounds(100,575,400,50);
         button3.addActionListener(this);
 
         label3 = new JLabel("Previous guess:");
@@ -153,6 +153,10 @@ public class GesdiNamber extends JFrame implements ActionListener{
         else if (e.getSource()==button2) {
             label2.setText("The number is: "+numbertoguess);
             label2.setForeground(Color.GREEN);
+            button1.setEnabled(false);
+            textarea1.setEditable(false);
+            submitenabled = false;
+
         }
 
         else if (e.getSource()==button3) {
